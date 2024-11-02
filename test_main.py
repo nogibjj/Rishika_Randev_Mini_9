@@ -1,12 +1,15 @@
-from main import add
+from lib import load, summarise, scatter, anx_boxplot, dep_boxplot
+import numpy as np
 
-
-def test_add():
-    """testing out add function"""
-    assert add(3, 10) == 13
-    assert add(2, -2) == 0
-    assert add(5, 6) == 11
-
-
-if __name__ == "__main__":
-    test_add()
+def test_load_summarise():
+    pivoted, regions = load()
+    means = summarise(pivoted)
+    assert np.isclose(means['Symptoms of Anxiety Disorder'], 28.996078)
+    assert np.isclose(means['Symptoms of Depressive Disorder'], 23.468627)
+    assert np.isclose(means['Symptoms of Anxiety Disorder or Depressive Disorder'], 33.827451)
+    
+def test_plots():
+    pivoted, regions = load()
+    assert scatter(pivoted) is not None
+    assert anx_boxplot(pivoted, regions) is not None
+    assert dep_boxplot(pivoted, regions) is not None

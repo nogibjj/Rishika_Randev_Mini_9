@@ -12,7 +12,7 @@ lint:
 
 test:
 #tests files
-	python -m pytest -cov=main test_main.py
+	python -m pytest -vv --nbval -cov=mylib -cov=main test_*.py *.ipynb
 
 all:
 #all of the above

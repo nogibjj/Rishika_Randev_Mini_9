@@ -1,8 +1,14 @@
 """Main function making use of the math module."""
 
-import math
+from lib import load, summarise, scatter, anx_boxplot, dep_boxplot
 
-
-def add(num1, num2):
-    """Adds two numbers."""
-    return math.ceil(num1) + math.floor(num2)
+if __name__ == "__main__":
+    pivoted, regions = load()
+    print(summarise(pivoted))
+    scatter(pivoted)
+    anx_boxplot(pivoted, regions)
+    dep_boxplot(pivoted, regions)
+    
+    
+    
+    
