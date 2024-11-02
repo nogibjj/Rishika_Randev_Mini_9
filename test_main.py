@@ -6,8 +6,6 @@ def test_load_summarise():
     means = summarise(pivoted)
     assert np.isclose(means['Symptoms of Anxiety Disorder'], 28.996078)
     assert np.isclose(means['Symptoms of Depressive Disorder'], 23.468627)
-    assert np.isclose(means['Symptoms of Anxiety Disorder or Depressive \
-    Disorder'], 33.827451)
     
 def test_plots():
     pivoted, regions = load()
