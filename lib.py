@@ -21,7 +21,9 @@ def summarise(df):
 
 def scatter(df):
     f = plt.figure(figsize=(12,8))
-    so.Plot(df, x="Symptoms of Anxiety Disorder", y="Symptoms of Depressive Disorder").add(so.Dots()).add(so.Text(fontsize=8), text="State") \
+    so.Plot(df, x="Symptoms of Anxiety Disorder", y="Symptoms of Depressive Disorder")\
+        .add(so.Dots()).add(so.Text(fontsize=8), \
+        text="State") \
     .label(
         x="% of Sample Reporting Anxiety Symptoms",
         y="% of Sample Reporting Depressive Symptoms",
@@ -31,7 +33,8 @@ def scatter(df):
 
 def anx_boxplot(pivoted, regions):
     merged = pd.merge(pivoted, regions, on="State", how='outer', indicator=True)
-    merged.boxplot(column="Symptoms of Anxiety Disorder", by="Division", grid=False, figsize = (12,8))
+    merged.boxplot(column="Symptoms of Anxiety Disorder", by="Division", \
+        grid=False, figsize = (12,8))
     plt.xticks(rotation=45)
     plt.xlabel("Regional Division")
     plt.ylabel("Anxiety Symptoms % Distribution")
@@ -41,7 +44,8 @@ def anx_boxplot(pivoted, regions):
 
 def dep_boxplot(pivoted, regions):
     merged = pd.merge(pivoted, regions, on="State", how='outer', indicator=True)
-    merged.boxplot(column="Symptoms of Depressive Disorder", by="Division", grid=False, figsize = (12,8))
+    merged.boxplot(column="Symptoms of Depressive Disorder", by="Division", \
+        grid=False, figsize = (12,8))
     plt.xticks(rotation=45)
     plt.xlabel("Regional Division")
     plt.ylabel("Depressive Symptoms % Distribution")

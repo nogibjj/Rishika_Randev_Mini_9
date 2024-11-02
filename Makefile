@@ -8,7 +8,7 @@ format:
 
 lint:
 #checks to make sure Python files are formatted to industry standard
-	pylint --ignore-patterns=test_.*?py *.py
+	ruff check *.py 
 
 test:
 #tests files
