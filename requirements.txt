@@ -1,0 +1,10 @@
+#devops
+black==22.3.0
+pytest==7.4.0
+pytest-cov==4.0.0
+pylint==2.15.3
+
+#datascience
+numpy==2.1.0
+matplotlib==3.9.0
+
