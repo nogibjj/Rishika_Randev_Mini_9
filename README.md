@@ -1,8 +1,8 @@
-[![CI](https://github.com/nogibjj/Rishika_Randev_MiniProject_1/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/Rishika_Randev_MiniProject_1/actions/workflows/hello.yml)
+[![CI](https://github.com/nogibjj/Rishika_Randev_Mini_9/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/Rishika_Randev_Mini_9/actions/workflows/hello.yml)
+# Rishika Randev's Mini Project 9 (Cloud Hosted Notebook) for IDS706
 
-# Rishika Randev's MiniProject 9 (Cloud Hosted Notebook) for IDS706
-
-Google Colab notebook link: https://colab.research.google.com/drive/1ByaP5fCPyhD2DOwKdj8APDBREQIadSIz?usp=sharing
+* [Google Colab notebook link](https://colab.research.google.com/drive/1ByaP5fCPyhD2DOwKdj8APDBREQIadSIz?usp=sharing)
+* [Video](https://youtu.be/Xz-PuDOe_U8)
 
 ## ☑️ Requirements:
 1. Set up a cloud-hosted Jupyter Notebook (e.g., Google Colab)
@@ -15,5 +15,5 @@ The second dataset in this project is a mapping of each US state to a regional d
 
 ## ☑️ Steps
 1. Prepare the necesary configuration files like the Dockerfile, devcontainer.json, Makefile, requirements.txt, and main.yml for GitHub Actions integration. Ensure that the requirements.txt lists all necessary packages.
-2. Navigate to Google Colab and create a new Jupyter notebook called main.ipynb. This is where all of your data ingestion, exploration, and manipulation code will go. Please reference this video for a walkthrough of what is included in this notebook.
+2. Navigate to Google Colab and create a new Jupyter notebook called main.ipynb. This is where all of your data ingestion, exploration, and manipulation code will go. Please reference [this video](https://youtu.be/Xz-PuDOe_U8) for a walkthrough of what is included in this notebook.
 3. Include basic tests of the main script in the test_main.py file to ensure that its functionalities are working as expected.
